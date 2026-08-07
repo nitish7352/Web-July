@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      background-color: red;
+      height: 100px;
+      width: 100px;
+    }
+
+    div:hover {
+      background-color: blue;
+      color: white;
+      /* transform: translateY(200px); */
+
+      transform: scale(1.03);  /* scale(1) means no change in size, but you can change the value to scale up or down */
+
+      transform: rotate(180deg);  /* rotate(0deg) means no change in rotation, but you can change the value to rotate the element */
+      transition: 5s;
+    } 
+
+    
+  </style>
+</head>
+<body>
+  <div>
+    Hello
+  </div>
+</body>
+</html>
