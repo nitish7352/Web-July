@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>EmployeeHub Dashboard</title>
+
+  <!-- CSS File -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="dashboard">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+      <div class="logo">
+        EmployeeHub
+      </div>
+
+      <ul class="menu">
+
+        <li>
+          <a href="#" class="active">
+            <span>▣</span>
+            Dashboard
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <span>👥</span>
+            Employees
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <span>▦</span>
+            Departments
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <span>📈</span>
+            Reports
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <span>⚙</span>
+            Settings
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <span>↪</span>
+            Logout
+          </a>
+        </li>
+
+      </ul>
+
+    </aside>
+
+
+    <!-- Main Content -->
+    <main class="main">
+
+      <!-- Topbar -->
+      <div class="topbar">
+
+        <input
+          type="text"
+          class="search"
+          placeholder="Search Employee"
+        >
+
+        <div class="admin">
+
+          <span class="notification">🔔</span>
+
+          <img
+            class="admin-img"
+            src="https://i.pravatar.cc/100?img=47"
+            alt="Admin"
+          >
+
+          <span>Admin</span>
+
+        </div>
+
+      </div>
+
+
+      <!-- Dashboard Heading -->
+      <div class="heading">
+
+        <h1>Dashboard Overview</h1>
+
+        <p>
+          Welcome back! Here's what's happening with your employees.
+        </p>
+
+      </div>
+
+
+      <!-- Dashboard Cards -->
+      <section class="cards">
+
+        <!-- Total Employees -->
+        <div class="card">
+
+          <div class="card-title">
+            Total Employees
+          </div>
+
+          <h2>250</h2>
+
+          <small>
+            +5% this month
+          </small>
+
+        </div>
+
+
+        <!-- Active Employees -->
+        <div class="card">
+
+          <div class="card-title">
+            Active
+          </div>
+
+          <h2>220</h2>
+
+          <small>
+            88% of employees
+          </small>
+
+        </div>
+
+
+        <!-- Employees on Leave -->
+        <div class="card">
+
+          <div class="card-title">
+            On Leave
+          </div>
+
+          <h2>15</h2>
+
+          <small>
+            6% of employees
+          </small>
+
+        </div>
+
+
+        <!-- Departments -->
+        <div class="card">
+
+          <div class="card-title">
+            Departments
+          </div>
+
+          <h2>8</h2>
+
+          <small>
+            Across the company
+          </small>
+
+        </div>
+
+      </section>
+
+
+      <!-- Employee List -->
+      <section class="employee-section">
+
+        <div class="employee-header">
+
+          <h2>Employee List</h2>
+
+          <button class="add-btn">
+            + Add Employee
+          </button>
+
+        </div>
+
+
+        <!-- Employee Table -->
+        <table class="employee-table">
+
+          <thead>
+
+            <tr>
+              <th>Name</th>
+              <th>Department</th>
+              <th>Salary</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+
+          </thead>
+
+
+          <tbody>
+
+            <!-- Employee 1 -->
+            <tr>
+
+              <td>Nitish Yadav</td>
+
+              <td>Developer</td>
+
+              <td>₹80,000</td>
+
+              <td>
+                <span class="status">
+                  Active
+                </span>
+              </td>
+
+              <td>
+
+                <button class="edit-btn">
+                  Edit
+                </button>
+
+                <button class="delete-btn">
+                  Delete
+                </button>
+
+              </td>
+
+            </tr>
+
+
+            <!-- Employee 2 -->
+            <tr>
+
+              <td>Priya Sharma</td>
+
+              <td>HR</td>
+
+              <td>₹65,000</td>
+
+              <td>
+                <span class="status">
+                  Active
+                </span>
+              </td>
+
+              <td>
+
+                <button class="edit-btn">
+                  Edit
+                </button>
+
+                <button class="delete-btn">
+                  Delete
+                </button>
+
+              </td>
+
+            </tr>
+
+
+            <!-- Employee 3 -->
+            <tr>
+
+              <td>Rahul Kumar</td>
+
+              <td>Designer</td>
+
+              <td>₹70,000</td>
+
+              <td>
+                <span class="status">
+                  Active
+                </span>
+              </td>
+
+              <td>
+
+                <button class="edit-btn">
+                  Edit
+                </button>
+
+                <button class="delete-btn">
+                  Delete
+                </button>
+
+              </td>
+
+            </tr>
+
+
+            <!-- Employee 4 -->
+            <tr>
+
+              <td>Anjali Singh</td>
+
+              <td>Marketing</td>
+
+              <td>₹60,000</td>
+
+              <td>
+                <span class="status">
+                  Active
+                </span>
+              </td>
+
+              <td>
+
+                <button class="edit-btn">
+                  Edit
+                </button>
+
+                <button class="delete-btn">
+                  Delete
+                </button>
+
+              </td>
+
+            </tr>
+
+          </tbody>
+
+        </table>
+
+      </section>
+
+    </main>
+
+  </div>
+
+</body>
+</html>
