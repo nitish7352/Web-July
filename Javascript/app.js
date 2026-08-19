@@ -1,0 +1,1 @@
+console.log("Hii I am external Js file"); //It is statment which gives output in console of browser.  
