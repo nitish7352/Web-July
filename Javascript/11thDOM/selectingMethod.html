@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p id="myp">This is paragraph Tag.</p>
+
+  <div class="shop">THis is Div - 0</div>
+  <div class="shop">THis is Second Div - 1</div>
+
+  <p>This is second paragraph.</p>
+  <p>This is third paragraph.</p>
+
+  <div class="box">This is Div box - 0</div>
+  <div class="box">This is Div box - 1</div>
+
+  <script>
+
+    //document = webpage
+    //element = tag
+
+    //1. getElementById("Id Name")
+
+    const paragraphtag = document.getElementById("myp")
+    console.log(paragraphtag)
+    console.log(paragraphtag.innerText)
+
+    //2. getElementsByClassName("Class Name")
+    const divContainer = document.getElementsByClassName("shop")
+    console.log(divContainer)
+    console.log(divContainer[1])
+    console.log(divContainer[1].textContent)
+
+    //3. getElementsByTagName("Tag Name")
+    const ele   =   document.getElementsByTagName("p")
+    console.log(ele)
+    console.log(ele[1])
+    console.log(ele[1].textContent)
+
+
+    //4. querySelector("CSS Selector") - ("#idName" or ".className" or "tagName")
+    // Always selects the first element of the given selector
+    const ele1 = document.querySelector(".box")
+    console.log(ele1)
+
+    //5. querySelectorAll("CSS Selector") - ("#idName" or ".className" or "tagName")
+    // Selects all the elements of the given selector
+    const ele2 = document.querySelectorAll(".box")
+    console.log(ele2)
+  </script>
+</body>
+</html>

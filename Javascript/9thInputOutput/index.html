@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+  
+    //let userName = prompt(" Enter your name");
+    //console.log(userName);
+
+    //confirm - It will give you two option to select - Ok and Cancel
+    //CONFIRM() yes or no
+
+    let result = confirm("Are you sure to logout?");
+    console.log(result);
+
+    //task : Write a Logic to Give Access to user - if user is Admin Give full access or Decline access
+
+    function permission(){
+
+      let result = confirm("Do You have admin access?")
+
+      if(result) {
+        alert("Full access");
+      }else {
+        alert("Access Denied");
+      }
+    }
+    permission();
+
+  </script>
+</body>
+</html>
