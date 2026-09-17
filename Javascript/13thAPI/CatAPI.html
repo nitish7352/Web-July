@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <img id="cat" height="300" width="300" />
+    <button id="btn" onclick="getImage()">Get Cat</button>
+    <script>
+      function getImage() {
+        const catImage = document.getElementById("cat"); //Image tag selected
+
+        fetch("https://api.thecatapi.com/v1/images/search") //API called
+          .then((res) => res.json()) //Response converted to JSON
+
+          .then(data => {
+            catImage.src = data[0].url; //Image URL set to the src of the image tag
+          })
+
+          .catch((err) => console.log("error Connection", err)); //Error handling
+      }
+
+      //document.getElementById("btn").addEventListener("click", getImage);
+    </script>
+  </body>
+</html>

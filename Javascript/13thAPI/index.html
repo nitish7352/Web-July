@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // http://randomuser.me/api
+
+      //fetch("Api Address")
+      //Rule : Convert the API Response into JSON format and then we can use it
+
+      fetch("https://randomuser.me/api")
+        //successful
+        .then((response) => response.json())
+
+        .then(data => console.log(data.results))
+
+        //error/Failure
+        .catch(function (error) {
+          //error - is parameter which will hold the error message
+          console.log("Error Connection : " + error);
+        });
+    </script>
+  </body>
+</html>
