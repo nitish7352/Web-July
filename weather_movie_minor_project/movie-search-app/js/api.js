@@ -1,17 +1,7 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <script>
-      //API - Carries Movie Data
+import { API_KEY, BASE_URL } from "./config.js";
 
-      // http://www.omdbapi.com/?i=tt3896198&apikey=fcc03078
-
-      async function getMovie(movieName) {
+export const searchMovies = async (query) => {
+        async function getMovie(movieName) {
         let url = `http://www.omdbapi.com/?t=${movieName}&apikey=fcc03078`;
 
         try {
@@ -34,12 +24,17 @@
         }
       }
 
-      getMovie("Vikram");
+    };
 
-      function ExtraTask() {
-        console.log("HELLO EVERYONE WELCOME TO JS");
-      }
-      ExtraTask();
-    </script>
-  </body>
-</html>
+
+export const getMovieDetails = async (imdbID) => {
+  const url = `${BASE_URL}?apikey=${API_KEY}&i=${imdbID}&plot=short`;
+  const response = await fetch(url);
+
+  if (!response.ok) throw new Error("Could not load movie details.");
+
+  const data = await response.json();
+  if (data.Response === "False") throw new Error(data.Error || "Details unavailable.");
+
+  return data;
+};

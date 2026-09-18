@@ -1,0 +1,3 @@
+# Keep API keys out of GitHub
+**/js/config.local.js
+.env
