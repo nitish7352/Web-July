@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <h1>Amazon Login</h1>
+
+    <form id="loginForm">
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" placeholder="Enter Name" required />
+
+      <br /><br />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" placeholder="Enter Email" required />
+
+      <br /><br />
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <p id="resMsg"></p>
+
+    <script>
+      const form = document.getElementById("loginForm");
+
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+
+        const response = await fetch("http://localhost:3000/login", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ name, email }),
+        });
+
+        const data = await response.json();
+        document.getElementById("resMsg").innerText = data.message;
+      });
+    </script>
+  </body>
+</html>
+
